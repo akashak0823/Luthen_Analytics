@@ -11,9 +11,6 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
 }
 
-
-
-
 .home-container {
   position: relative;
   z-index: 1;
@@ -87,7 +84,6 @@
   color: var(--text-main);
 }
 
-
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -119,7 +115,6 @@
   transform: scale(1.05);
   box-shadow: 0 0 30px var(--btn-accent);
 }
-
 
 .features-section {
   display: flex;
@@ -188,7 +183,6 @@
   opacity: 0.85;
 }
 
-
 @keyframes floatUpDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -201,6 +195,7 @@
   }
 }
 
+/* Default responsive tweaks for tablets and phones */
 @media (max-width: 768px) {
   .hero-text h2 {
     font-size: 2.4rem;
@@ -213,5 +208,72 @@
 
   .glass-card {
     width: 90%;
+  }
+}
+
+/* Small devices - phones (portrait) */
+@media screen and (max-width: 480px) and (max-aspect-ratio: 9/16) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .glass-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Phones landscape or devices with wider aspect ratios */
+@media screen and (max-width: 768px) and (min-aspect-ratio: 9/16) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  .glass-card {
+    width: 85%;
+  }
+}
+
+/* Tablets (portrait) */
+@media screen and (min-width: 481px) and (max-width: 1024px) and (max-aspect-ratio: 3/4) {
+  .hero-text h2 {
+    font-size: 2.6rem;
+  }
+  .glass-card {
+    width: 75%;
+  }
+}
+
+/* Tablets and small desktops (wider screens) */
+@media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 4/3) {
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+  .glass-card {
+    width: 45%;
+  }
+}
+
+/* Large desktops (wider aspect ratios) */
+@media screen and (min-width: 1201px) and (min-aspect-ratio: 16/9) {
+  .hero-text h2 {
+    font-size: 3.2rem;
+  }
+  .glass-card {
+    width: 320px;
+  }
+}
+
+/* Ultra wide screens */
+@media screen and (min-width: 1600px) and (min-aspect-ratio: 21/9) {
+  .hero-text h2 {
+    font-size: 3.6rem;
+  }
+  .glass-card {
+    width: 350px;
   }
 }
