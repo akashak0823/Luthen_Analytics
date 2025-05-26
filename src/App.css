@@ -6,12 +6,25 @@
   --btn-dark: #123458;
   --btn-accent: #4ED7F1;
   --accent-font: #4ED7F1;
-  --glass-bg: rgba(18, 52, 88, 0.3);  /* Updated for bluish glass effect */
+  --glass-bg: rgba(18, 52, 88, 0.3);
   --glass-border: rgba(255, 255, 255, 0.15);
   --glass-shadow: rgba(18, 52, 88, 0.4);
 }
 
-/* Universal Reset */
+/* Base Font Size and Typography */
+html {
+  font-size: clamp(14px, 1.5vw, 18px); /* Responsive font size */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: transparent;
+  color: var(--text-main);
+}
 
 /* Background Image Layer */
 .background-image-layer {
@@ -30,18 +43,17 @@
 /* App Wrapper */
 .App {
   text-align: center;
-  color: var(--text-main);
   position: relative;
   z-index: 1;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 5vw 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  color: var(--text-main);
 }
-
-
 
 /* Header Style */
 .App-header {
@@ -51,10 +63,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--btn-dark);
-  padding: 20px;
+  font-size: 2rem;
+  padding: 2rem;
   border-radius: 12px;
+  color: var(--btn-dark);
 }
 
 /* Logo Styling */
@@ -78,7 +90,7 @@
   }
 }
 
-/* Links */
+/* Link Styling */
 .App-link {
   color: var(--accent-font);
   text-decoration: none;
@@ -89,7 +101,7 @@
   color: var(--btn-accent);
 }
 
-/* Button Style */
+/* Button Styling */
 button {
   background-color: var(--btn-dark);
   color: white;
@@ -99,10 +111,62 @@ button {
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(78, 215, 241, 0.3);
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: var(--btn-accent);
   color: #030303;
   box-shadow: 0 0 12px var(--btn-accent);
+}
+
+/* ----------------------- */
+/*        MEDIA QUERIES   */
+/* ----------------------- */
+
+/* Phones (≤480px) — Optimized */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .App {
+    padding: 4vw 5vw;
+    justify-content: flex-start;
+  }
+
+  .App-header {
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+
+  .App-logo {
+    height: 3.0vmin;
+  }
+
+  .App-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium Devices (Desktops) */
+@media (min-width: 1024px) {
+  .App-header {
+    font-size: 2.2rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  .App-logo {
+    height: 40vmin;
+  }
 }
