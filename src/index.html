@@ -1,0 +1,63 @@
+import React from 'react';
+import '../Css/Home.css';
+import Navbar from "../components/Navbar";
+
+// Assuming the video is placed in public/videos/analytics-bg.mp4
+const Home = () => {
+  return (
+    <div className="home-container">
+      {/* Live background video */}
+      <video autoPlay muted loop className="background-video">
+        <source src="/videos/analytics-bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-text">
+          <h2>
+            Transforming Data into Strategy:{' '}
+            <span className="highlight">Powering Smarter Decisions</span>
+          </h2>
+          <p>
+            Luthen Analytics is your partner in unlocking business potential through deep analytics,
+            tailored strategies, and AI-powered insights.
+          </p>
+          <div className="cta-buttons">
+            <button className="btn outline">Explore Services</button>
+            <button className="btn filled">Get a Free Consultation</button>
+          </div>
+        </div>
+        <div className="hero-image">
+          <img src="/Assets/data.png" alt="Analytics" />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="why-luthen">
+          <h3>Why Luthen?</h3>
+          <p>Proven ROI, industry-specific expertise, real-time insights.</p>
+          <div className="testimonial">
+            “Helped us grow significantly in just 3 months” <br />– Retail Client
+          </div>
+        </div>
+        <div className="key-features">
+          <h3>Key Features:</h3>
+          <ul>
+            <li>🔁 Data-to-Decision Framework</li>
+            <li>📊 Domain-Specific Models</li>
+            <li>📈 Enterprise-Level Analytics</li>
+            <li>🔓 Subscription-Based Scalability</li>
+          </ul>
+          <button className="btn filled small">Book a Strategy Call</button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

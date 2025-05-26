@@ -1,0 +1,116 @@
+
+
+.about-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00d2ff, #3a47d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.highlight {
+  color: #00d2ff;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.cube-card {
+  width: 240px;
+  min-height: 220px;
+  background: rgba(0, 0, 0, 0.656);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  color: #00d2ff;
+  text-align: center;
+  padding: 2rem 1rem;
+  cursor: default;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.cube-card:hover {
+  box-shadow:
+    0 0 40px rgba(0, 210, 255, 0.6),
+    0 0 60px rgba(58, 71, 213, 0.7);
+}
+
+.industry-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(0, 210, 255, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.cube-card:hover .industry-icon {
+  transform: scale(1.2);
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #cdeaff;
+  margin-bottom: 0.6rem;
+  user-select: none;
+  text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-line;
+  color: #d4e9ff;
+  text-shadow: none;
+}
+
+.industries-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.demo-button {
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  color: white;
+  padding: 0.9rem 2.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 210, 255, 0.5);
+  transition: all 0.4s ease;
+}
+
+.demo-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.9);
+}
+
+
+@media (max-width: 768px) {
+  .cube-card {
+    width: 90%;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+  }
+}

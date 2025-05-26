@@ -1,0 +1,117 @@
+.services-container {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--btn-accent), var(--btn-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-header .highlight {
+  color: var(--accent-font);
+}
+
+.services-header p {
+  font-size: 1.1rem;
+  color: var(--btn-dark);
+  margin-top: 0.5rem;
+}
+
+/* === 3D Cube Cards === */
+.cube-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  perspective: 1200px;
+}
+
+.cube-card {
+  width: 260px;
+  height: 260px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.cube-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.cube-card:hover .cube-inner {
+  transform: rotateY(180deg);
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s ease;
+  color: #ffffff; /* Ensures all card text is white */
+}
+
+/* Front Face – Blue Gradient */
+.cube-front {
+  background: linear-gradient(135deg, #0052cc, #007fff);
+  backdrop-filter: blur(20px);
+  transform: rotateY(0deg);
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 85, 255, 0.4);
+}
+
+.cube-front h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.cube-front p {
+  font-size: 1rem;
+}
+
+/* Back Face – Soft Blue Glass Effect */
+.cube-back {
+  background: rgba(0, 102, 204, 0.3);
+  backdrop-filter: blur(30px);
+  transform: rotateY(180deg);
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 0 30px rgba(0, 102, 204, 0.3);
+  z-index: 1;
+  border: 1px solid rgba(0, 102, 204, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cube-card {
+    width: 90%;
+    height: 240px;
+  }
+
+  .services-header h1 {
+    font-size: 2rem;
+  }
+}
