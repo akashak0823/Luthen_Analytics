@@ -11,12 +11,8 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
 }
 
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+
 
 .home-container {
   position: relative;
@@ -91,6 +87,7 @@
   color: var(--text-main);
 }
 
+
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +120,7 @@
   box-shadow: 0 0 30px var(--btn-accent);
 }
 
+
 .features-section {
   display: flex;
   flex-wrap: wrap;
@@ -133,14 +131,14 @@
 }
 
 .glass-card {
-  width: clamp(260px, 80%, 320px);
+  width: 320px;
   background: var(--glass-bg);
   border-radius: 20px;
   box-shadow: 0 0 25px var(--glass-shadow);
   backdrop-filter: blur(18px);
   border: 1px solid var(--glass-border);
   text-align: center;
-  padding: clamp(1rem, 4vw, 2rem);
+  padding: 2rem;
   animation: floatUpDown 4s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: var(--text-main);
@@ -190,6 +188,7 @@
   opacity: 0.85;
 }
 
+
 @keyframes floatUpDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -202,7 +201,6 @@
   }
 }
 
-/* Tablets and medium devices */
 @media (max-width: 768px) {
   .hero-text h2 {
     font-size: 2.4rem;
@@ -214,70 +212,6 @@
   }
 
   .glass-card {
-    width: 85%;
-    padding: 1.5rem 1rem;
-  }
-}
-
-/* Mobile phones (≤480px) */
-@media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-
-  .hero-section {
-    padding: 1.5rem 1rem;
-  }
-
-  .hero-text {
-    padding: 2rem 1rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.5rem;
-    border-radius: 20px;
-  }
-
-  .features-section {
-    padding: 1.5rem 0.5rem;
-    gap: 1.5rem;
-  }
-
-  .glass-card {
-    width: 95%;
-    padding: 1.2rem 0.8rem;
-    border-radius: 16px;
-  }
-
-  .glass-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .glass-card ul {
-    font-size: 0.9rem;
-    margin: 0.8rem 0;
-  }
-
-  .glass-card li {
-    margin-bottom: 0.5rem;
-  }
-
-  .testimonial {
-    font-size: 0.8rem;
-    margin-top: 0.8rem;
+    width: 90%;
   }
 }
